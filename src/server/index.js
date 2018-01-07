@@ -10,6 +10,7 @@ import webpack from 'webpack'
 import history from 'connect-history-api-fallback'
 
 // 正式环境时，下面两个模块不需要引入
+// checkout following two modules in product environment
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 
@@ -48,6 +49,28 @@ app.use(webpackHotMiddleware(compiler))
 app.use(express.static(path.join(__dirname, 'views')))
 app.get('/', function (req, res) {
   res.sendFile('./views/index.html')
+})
+
+// if you are familiar with express, you can put following
+// api into server/router
+app.get('/test', function (req, res) {
+  res.send({'data': [{
+                  date: '2016-05-02',
+                  name: 'Tom',
+                  address: '1518 ..'
+                }, {
+                  date: '2016-05-04',
+                  name: 'Tom',
+                  address: '1517 ..'
+                }, {
+                  date: '2016-05-01',
+                  name: 'Tom',
+                  address: '1519 ..'
+                }, {
+                  date: '2016-05-03',
+                  name: 'Tom',
+                  address: '1516 ..'
+                }]})
 })
 
 // catch 404 and forward to error handler
