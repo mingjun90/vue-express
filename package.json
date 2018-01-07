@@ -7,7 +7,7 @@
     "dev": "nodemon index.js",
     "build": "node build/build.js"
   },
-  "author": "LuckyStarry <starry@vip.qq.com> forked from [Konata9 <maochichen@163.com>]",
+  "author": "mingjun90 forked from [LuckyStarry <starry@vip.qq.com>]",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.17.1",
