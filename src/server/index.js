@@ -54,23 +54,23 @@ app.get('/', function (req, res) {
 // if you are familiar with express, you can put following
 // api into server/router
 app.get('/test', function (req, res) {
-  res.send({'data': [{
-                  date: '2016-05-02',
-                  name: 'Tom',
-                  address: '1518 ..'
-                }, {
-                  date: '2016-05-04',
-                  name: 'Tom',
-                  address: '1517 ..'
-                }, {
-                  date: '2016-05-01',
-                  name: 'Tom',
-                  address: '1519 ..'
-                }, {
-                  date: '2016-05-03',
-                  name: 'Tom',
-                  address: '1516 ..'
-                }]})
+  res.send({'tabledata': [{
+              date: '2016-05-02',
+              name: 'Tom',
+              address: '1518 ..'
+            }, {
+              date: '2016-05-04',
+              name: 'Tom',
+              address: '1517 ..'
+            }, {
+              date: '2016-05-01',
+              name: 'Tom',
+              address: '1519 ..'
+            }, {
+              date: '2016-05-03',
+              name: 'Tom',
+              address: '1516 ..'
+            }]})
 })
 
 // catch 404 and forward to error handler
